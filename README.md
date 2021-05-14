@@ -1,2 +1,35 @@
 # esbuild-plugin-external-global
-external modules as global variables
+
+External modules as global variables with `esbuild`.
+
+## Install
+
+```sh
+yarn add -D esbuild-plugin-external-global
+```
+
+or
+
+```sh
+npm i -D esbuild-plugin-external-global
+```
+
+## Usage
+
+Add to your esbuild plugins list:
+
+```js
+const esbuild = require("esbuild");
+const { externalGlobalPlugin } = require("esbuild-plugin-external-global");
+
+esbuild.build({
+  ...
+  plugins: [
+    externalGlobalPlugin({
+      'react': 'React',
+      'react-dom': 'ReactDOM'
+    })
+  ]
+  ...
+});
+```
