@@ -26,8 +26,9 @@ esbuild.build({
   ...
   plugins: [
     externalGlobalPlugin({
-      'react': 'React',
-      'react-dom': 'ReactDOM'
+      'react': 'window.React',
+      'react-dom': 'window.ReactDOM',
+      'jQuery': '$'
     })
   ]
   ...
