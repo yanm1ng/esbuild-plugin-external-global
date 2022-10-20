@@ -28,7 +28,8 @@ esbuild.build({
     externalGlobalPlugin({
       'react': 'window.React',
       'react-dom': 'window.ReactDOM',
-      'jQuery': '$'
+      'jQuery': '$',
+      'fetch-json': 'globalThis'
     })
   ]
   ...
